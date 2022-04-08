@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.8);
+    top: 0;
+    position: sticky;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 10px 30px;
+    color: blanchedalmond;
+}
+.navbar ul li a:hover{
+    box-shadow: black;
+    color: black;
+    background-color: #fff;
+}
+
+/* HOME */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#home::before{
+    background : url("E:/sajid/images/front.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 865px;
+    width: 100%;
+    content: "";
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 1;
+}
+#google_element{
+	float:right;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.8);
+    top: 0;
+    position: sticky;
+	
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+.heading{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10px;
+}
+.btn{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: black;
+    font-weight: bold;
+}
+
+/* About me*/
+
+#about{
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 500px;
+    height: 350px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 20px;
+}
+#intro h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+#intro p{
+    font-size: 30px;
+}
+
+/* Portfolio */
+
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    padding: 20px;
+    font-weight: bold;
+   
+}
+.gallery{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    position: relative;  
+    width: 350px;
+    height: 220px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+ 
+
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+
+    }
+}
+.gallery span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*72deg)) translateZ(350px);
+}
+
+
+.gallery span img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 2s;
+}
+.gallery span:hover img{
+    transform: translateY(-50px) scale(1.0);
+}
+
+/* SKILLS*/
+
+#skills{
+    margin: 0;
+    width: 97%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+#skills h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.left{
+    width: 50%;
+}
+.left h1{
+    text-align: left;
+    font-size: 30px;
+}
+.left p{
+    font-size: 20px;
+    margin: 0px;
+    text-align: justify;
+}
+
+.left a{
+    background-color: blue;
+    color: #fff;
+    padding: 10px 20px;
+    border: px solid;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.left a:hover{
+    background-color: black;
+    color: red  ;
+}
+.right{
+    flex: auto;
+    margin-left: 20px;
+}
+.right .line{
+    margin-bottom: 20px;
+}
+.right .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .info span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.right .bar{
+    background-color: gray;
+    height: 5px;
+    width: 100%;
+    position: relative;
+}
+.right .bar::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: black;
+}
+.right .html::before{
+    width: 90%;
+}
+.right .css::before{
+    width: 80%;
+}
+.right .js::before{
+    width: 50%;
+}
+.right .angular::before{
+    width: 40%;
+}
+
+/* Education */
+
+#Education{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgba(255, 45, 45, 0.233)50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+
+.box:hover{
+    background-position: left bottom;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 45, 45, 0.116);
+}
+
+/* contacts */
+
+#Contacts{
+ 
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+padding-top:10px;
+padding-bottom:50px;	
+}
+.container{
+
+    width:80%;
+    margin: 0px auto;
+  
+   
+}
+.contact-box{
+    background: #fff;
+    display: flex;
+
+}
+
+.contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+
+}
+.contact-right{
+    flex-basis: 40%;
+    padding: 40px;
+    background: brown;
+    color: #fff;
+}
+h1{
+    margin-bottom: 10px;
+}
+.container p{
+    margin-bottom: 40px;
+}
+.input-row{
+   
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+
+}
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.contact-left a{
+    background: brown;
+    width: 100px;
+    border: none;
+    color: whitesmoke;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 30px;
+}
+.pic img{
+width:40px;
+height:100px;
+padding: 10px;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
